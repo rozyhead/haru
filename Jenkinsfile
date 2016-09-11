@@ -8,6 +8,6 @@ node {
   }
 
   stage('Archive'){
-    archiveArtifacts artifacts: 'build/libs/*.jar'
+    archiveArtifacts artifacts: '**/build/libs/*.jar'
   }
 }
