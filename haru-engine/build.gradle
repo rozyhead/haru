@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+configurations {
+  compile.exclude module: "spring-boot-starter-tomcat"
+}
+
+dependencies {
+  compile("org.springframework.boot:spring-boot-starter-web")
+  compile("org.springframework.boot:spring-boot-starter-websocket")
+  compile("org.springframework.boot:spring-boot-starter-undertow")
+  compile("org.springframework.boot:spring-boot-devtools")
+  compile("org.projectlombok:lombok:$lombokVersion")
+  testCompile("org.springframework.boot:spring-boot-starter-test")
+}
+
+bootRepackage {
+  executable = true
+}
