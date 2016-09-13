@@ -1,0 +1,10 @@
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+dependencies {
+  compile 'org.springframework.cloud:spring-cloud-starter-eureka-server'
+}
+
+bootRepackage {
+  executable = true
+}
