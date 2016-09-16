@@ -9,11 +9,13 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer
  */
 @EnableEurekaServer
 @SpringBootApplication
-object HaruRegistry {
+open class HaruRegistry {
 
-  @JvmStatic
-  fun main(args: Array<String>) {
-    SpringApplication.run(HaruRegistry::class.java, *args)
+  companion object {
+    @JvmStatic
+    fun main(args: Array<String>) {
+      SpringApplication.run(HaruRegistry::class.java, *args)
+    }
   }
 
 }

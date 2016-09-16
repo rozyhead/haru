@@ -1,19 +1,17 @@
 package haru.engine.port.adapter.web
 
-import org.springframework.web.bind.annotation.GetMapping
+import haru.engine.api.Task
+import haru.engine.api.TaskService
 import org.springframework.web.bind.annotation.RestController
 
 /**
  * @author takeshi
  */
 @RestController
-open class TaskController {
+open class TaskController : TaskService {
 
-  data class TaskJson(val name: String)
-
-  @GetMapping("/api/v1/tasks")
-  fun tasks(): List<TaskJson> {
-    return listOf(TaskJson("dummy"))
+  override fun getTasks(): List<Task> {
+    return listOf(Task("dummy"))
   }
 
 }

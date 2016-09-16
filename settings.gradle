@@ -1,5 +1,6 @@
 include 'haru-manager'
 include 'haru-store'
+include 'haru-engine-api'
 include 'haru-engine'
 include 'haru-worker'
 include 'haru-trigger'
