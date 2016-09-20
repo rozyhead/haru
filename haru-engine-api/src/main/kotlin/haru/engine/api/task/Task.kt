@@ -1,4 +1,4 @@
-package haru.engine.api
+package haru.engine.api.task
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 

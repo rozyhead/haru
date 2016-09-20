@@ -1,7 +1,7 @@
 package haru.engine.port.adapter.web
 
-import haru.engine.api.Task
-import haru.engine.api.TaskService
+import haru.engine.api.task.Task
+import haru.engine.api.task.TaskService
 import org.springframework.web.bind.annotation.RestController
 
 /**

@@ -10,5 +10,5 @@ import org.springframework.context.annotation.Configuration
 @Configuration
 @ComponentScan
 @EnableFeignClients
-open class TaskServiceFeignClientConfiguration {
+open class HaruEngineClientConfiguration {
 }
