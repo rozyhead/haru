@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-haru.engine.api.HaruEngineClientConfiguration

@@ -1,0 +1,6 @@
+dependencies {
+  compile "org.jetbrains.kotlin:kotlin-stdlib"
+  compile "org.springframework.boot:spring-boot-starter-web"
+  compile 'org.springframework.cloud:spring-cloud-starter-eureka-server'
+}
+

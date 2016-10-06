@@ -42,11 +42,6 @@ subprojects {
     dependencies {
       dependency "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
       dependency "com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonModuleKotlinVersion"
-      dependencySet(group: "org.springframework.boot", version: springBootVersion) {
-        entry("spring-boot-starter-web") {
-          exclude "org.springframework.boot:spring-boot-starter-tomcat"
-        }
-      }
     }
   }
 
