@@ -7,12 +7,10 @@ import org.springframework.scheduling.annotation.Scheduled
 import org.springframework.stereotype.Component
 import javax.inject.Inject
 
-/**
- * @author takeshi
- */
 @Component
-open class EngineTaskMonitor @Inject constructor(
-    val taskServiceFeignClient: TaskServiceFeignClient) {
+class EngineTaskMonitor @Inject constructor(
+    val taskServiceFeignClient: TaskServiceFeignClient
+) {
 
   val log: Logger = LoggerFactory.getLogger(this.javaClass)
 
@@ -21,4 +19,5 @@ open class EngineTaskMonitor @Inject constructor(
     val tasks = taskServiceFeignClient.getTasks()
     log.info("tasks = {}", tasks)
   }
+
 }

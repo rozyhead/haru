@@ -13,18 +13,13 @@ import org.springframework.context.annotation.Bean
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableCircuitBreaker
-open class TaskWorkerApplication {
-
-  companion object {
-    @JvmStatic
-    fun main(args: Array<String>) {
-      SpringApplication.run(TaskWorkerApplication::class.java, *args)
-    }
-  }
+class TaskWorkerApplication {
 
   @Bean
-  open fun jacksonKotlinModule(): KotlinModule {
-    return KotlinModule()
-  }
+  fun jacksonKotlinModule() = KotlinModule()
 
+}
+
+fun main(args: Array<String>) {
+  SpringApplication.run(TaskWorkerApplication::class.java, *args)
 }
