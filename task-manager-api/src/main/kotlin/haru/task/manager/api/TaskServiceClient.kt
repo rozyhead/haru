@@ -3,11 +3,11 @@ package haru.task.manager.api
 import org.springframework.cloud.netflix.feign.FeignClient
 import org.springframework.stereotype.Component
 
-@FeignClient(value = "task-manager", fallback = TaskServiceFeignClient.Fallback::class)
-interface TaskServiceFeignClient : TaskService {
+@FeignClient(value = "task-manager", fallback = TaskServiceClient.Fallback::class)
+interface TaskServiceClient : TaskService {
 
   @Component
-  class Fallback : TaskServiceFeignClient {
+  class Fallback : TaskServiceClient {
 
     override fun getTasks(): List<Task> {
       return listOf()

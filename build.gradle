@@ -41,6 +41,7 @@ subprojects {
     }
     dependencies {
       dependency "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+      dependency "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
       dependency "com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonModuleKotlinVersion"
     }
   }
