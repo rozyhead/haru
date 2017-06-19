@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: haru-worker
+
+server:
+  port: 9876
+
