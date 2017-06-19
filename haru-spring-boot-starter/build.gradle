@@ -1,0 +1,9 @@
+dependencies {
+  compile "org.jetbrains.kotlin:kotlin-stdlib"
+  compile "org.springframework.boot:spring-boot-starter"
+  compile "com.fasterxml.jackson.module:jackson-module-kotlin"
+}
+
+bootRepackage {
+  enabled = false
+}

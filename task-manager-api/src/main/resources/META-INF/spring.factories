@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-haru.task.manager.api.TaskManagerClientConfiguration

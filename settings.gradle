@@ -1,4 +1,2 @@
-include 'monitor'
-include 'registry'
-include 'task-manager-api'
-include 'task-worker'
+include 'haru-spring-boot-starter'
+include 'haru-worker'
