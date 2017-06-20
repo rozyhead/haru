@@ -17,4 +17,10 @@ interface Task {
 
   val logger: TaskProcessingLogger
 
+  fun start()
+
+  fun complete(result: TaskResult)
+
+  fun completeExceptionally(thrown: Throwable)
+
 }
