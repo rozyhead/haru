@@ -1,6 +1,8 @@
 buildscript {
   ext {
+    guavaVersion = "22.0"
     kotlinVersion = "1.1.2"
+    kotlinxVersion = "0.16"
     jacksonModuleKotlinVersion = "2.6.7"
     springBootVersion = "1.5.2.RELEASE"
   }
@@ -37,7 +39,15 @@ subprojects {
     dependencies {
       dependency "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
       dependency "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
+      dependency "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxVersion"
       dependency "com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonModuleKotlinVersion"
+      dependency "com.google.guava:guava:$guavaVersion"
+    }
+  }
+
+  kotlin {
+    experimental {
+      coroutines 'enable'
     }
   }
 }

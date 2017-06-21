@@ -4,7 +4,6 @@ import haru.worker.domain.model.task.TaskResult
 
 interface TaskProcessor {
 
-  @Throws(TaskProcessingException::class)
-  operator fun invoke(arguments: TaskProcessingArguments, logger: TaskProcessingLogger): TaskResult
+  suspend fun process(params: TaskProcessingParams, logger: TaskProcessingLogger): TaskResult
 
 }
