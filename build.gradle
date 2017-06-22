@@ -5,6 +5,7 @@ buildscript {
     kotlinxVersion = "0.16"
     jacksonModuleKotlinVersion = "2.6.7"
     springBootVersion = "1.5.2.RELEASE"
+    mockitoKotlinVersion = "1.5.0"
   }
   repositories {
     jcenter()
@@ -42,6 +43,7 @@ subprojects {
       dependency "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxVersion"
       dependency "com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonModuleKotlinVersion"
       dependency "com.google.guava:guava:$guavaVersion"
+      dependency "com.nhaarman:mockito-kotlin:$mockitoKotlinVersion"
     }
   }
 
