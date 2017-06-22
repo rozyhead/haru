@@ -1,11 +1,24 @@
 #!groovy
 
-node {
+node('node') {
   stage('Checkout') {
     checkout scm
   }
 
-  stage('Build'){
+  stage('Compile'){
+    sh './gradlew classes'
+  }
+
+  stage('Compile tests'){
+    sh './gradlew testClasses'
+  }
+
+  stage('Test'){
+    sh './gradlew test'
+    junit 'build/test-results/**/*.xml'
+  }
+
+  stage('Packaging'){
     sh './gradlew build'
   }
 
@@ -13,3 +26,4 @@ node {
     archiveArtifacts artifacts: '**/build/libs/*.jar'
   }
 }
+
