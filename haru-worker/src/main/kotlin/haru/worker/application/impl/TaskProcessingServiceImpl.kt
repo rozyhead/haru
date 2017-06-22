@@ -45,7 +45,10 @@ class TaskProcessingServiceImpl(
     val plugin = pluginRegistry.findById(task.pluginId)
     val processor = plugin.createProcessor(task.config)
 
-    launch(dispatcher + parentJob) {
+    val coroutineName = CoroutineName("task-${task.id.value}")
+    val context = dispatcher + coroutineName + parentJob
+
+    launch(context) {
       val job = context[Job]!!
       run(singleThreadContext) {
         jobs += (task.id to job)
@@ -58,7 +61,7 @@ class TaskProcessingServiceImpl(
       } catch (e: Exception) {
         task.completeExceptionally(e)
       } finally {
-        run(singleThreadContext + NonCancellable) {
+        run(singleThreadContext) {
           jobs -= task.id
         }
       }
