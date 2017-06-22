@@ -15,7 +15,7 @@ node('node') {
 
   stage('Test'){
     sh './gradlew test'
-    junit 'build/test-results/**/*.xml'
+    junit '**/build/test-results/**/*.xml'
   }
 
   stage('Packaging'){
